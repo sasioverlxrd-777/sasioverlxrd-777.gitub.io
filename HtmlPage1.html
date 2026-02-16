@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 字符编码必须放在最前面 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 网页标题 -->
+    <title>✨ 2026 新春快乐 · 专属祝福 ✨</title>
+
+    <!-- 社交分享卡片（微信/QQ/微博等） -->
+    <meta property="og:title" content="2026 新春快乐 · 专属祝福" />
+    <meta property="og:description" content="这是我收到的2026专属新年祝福，快来看看你的！" />
+    <meta property="og:image" content="https://yourname.github.io/newyear2026/preview.jpg" />
+    <meta property="og:url" content="https://yourname.github.io/newyear2026/" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 烟花画布 -->
+    <canvas id="fireworks"></canvas>
+
+    <!-- 雪花容器 -->
+    <div id="snowflakes"></div>
+
+    <!-- 主内容区 -->
+    <div class="container" id="capture">
+        <h1>🏮 2026 新春快乐 🏮</h1>
+
+        <!-- 名字输入 -->
+        <div class="input-section">
+            <label for="userName">输入你的名字：</label><br>
+            <input type="text" id="userName" placeholder="例如：小明" maxlength="10">
+            <button id="applyNameBtn">确定</button>
+        </div>
+
+        <div id="blessing">加载中...</div>
+        <div id="countdown"></div>
+
+        <!-- 音乐控制 -->
+        <div class="music-control">
+            <button id="playBtn">🔊 点我播放新年音乐</button>
+            <audio id="bgMusic" src="https://cdn.pixabay.com/download/audio/2022/01/14/audio_5c9a1d8f3f.mp3?filename=chinese-new-year-music-12198.mp3" preload="auto"></audio>
+        </div>
+
+        <!-- 截图按钮 -->
+        <button id="downloadBtn" class="download-btn">💾 保存祝福图片</button>
+    </div>
+
+    <!-- 引入 html2canvas（用于截图） -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+    <!-- 引入自定义脚本 -->
+    <script src="script.js"></script>
+</body>
+</html>

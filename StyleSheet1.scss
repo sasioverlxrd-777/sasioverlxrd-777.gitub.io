@@ -1,0 +1,149 @@
+﻿body {
+    /* 全局重置 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* 背景 */
+    body {
+        background: linear-gradient(135deg, #c33764, #1d2671);
+        font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+        color: white;
+        min-height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    /* 烟花画布 */
+    #fireworks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    /* 雪花容器 */
+    #snowflakes {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .snowflake {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        opacity: 0.8;
+        user-select: none;
+        animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(100vh) rotate(360deg);
+        }
+    }
+    /* 主内容区 */
+    .container {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 40px;
+        max-width: 700px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(255,255,255,0.7);
+    }
+
+    #blessing {
+        font-size: 1.4em;
+        line-height: 1.6;
+        margin: 20px 0;
+        min-height: 60px;
+    }
+
+    #countdown {
+        font-size: 1.2em;
+        margin: 20px 0;
+        color: #ffd700;
+    }
+
+    .music-control {
+        margin-top: 20px;
+    }
+
+    #playBtn {
+        padding: 10px 20px;
+        font-size: 1em;
+        background: #ff6b6b;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    #playBtn:hover {
+        background: #ff5252;
+        transform: scale(1.05);
+    }
+    /* ===== 名字输入区 ===== */
+    .input-section {
+        margin: 20px 0;
+    }
+
+    #userName {
+        padding: 8px 15px;
+        font-size: 1em;
+        border: 2px solid #ffd700;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        width: 180px;
+        text-align: center;
+    }
+
+    #applyNameBtn {
+        margin-left: 10px;
+        padding: 8px 15px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    #applyNameBtn:hover {
+        background: #45a049;
+    }
+    /* ===== 下载按钮 ===== */
+    .download-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: all 0.3s;
+    }
+
+    .download-btn:hover {
+        background: #1976d2;
+        transform: scale(1.05);
+    }
+}
